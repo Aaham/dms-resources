@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>AI readiness scorecard | DMS resources</title>
+<link rel="icon" href="/static/assets/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/static/assets/apple-touch-icon.png">
+<link rel="preload" href="/static/assets/fonts/archivo-400-900.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/static/assets/fonts.css">
+<link rel="stylesheet" href="/static/styles.css">
+<link rel="stylesheet" href="/static/scorecard.css">
+</head>
+<body class="scorecard-page">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="masthead">
+  <div class="wrap masthead__bar">
+    <a class="masthead__logo" href="/" aria-label="DMS resources"><img src="/static/assets/dms-logo.png" alt="DMS" width="98" height="39"></a>
+    <nav class="masthead__nav" aria-label="Site"><a href="/">All resources</a></nav>
+  </div>
+</header>
+
+<main id="main">
+  <div id="boot-status" class="wrap boot-status" role="status">Opening the scorecard…</div>
+
+  <section id="workspace" class="wrap workspace" hidden>
+    <p id="arrival-note" class="message" role="status" hidden></p>
+    <p id="workspace-message" class="message" role="status" hidden></p>
+
+    <div id="assessment-view" hidden>
+      <header class="assessment-heading">
+        <p class="eyebrow"><span class="eyebrow__mark" aria-hidden="true"></span>20 statements</p>
+        <h1>AI readiness scorecard</h1>
+        <p>Answer based on what your organization has in place today. Choose “No / unknown” if you’re not sure.</p>
+      </header>
+      <div class="progress-line"><span id="progress-label">0 of 20 answered</span><span id="draft-status">Your answers are saved in this browser until you submit.</span></div>
+      <progress id="assessment-progress" max="20" value="0" aria-label="Statements answered">0 of 20</progress>
+
+      <div class="assessment-layout">
+        <aside class="step-sidebar">
+          <nav id="step-nav" aria-label="Scorecard sections"></nav>
+          <div class="sidebar-note">
+            <p class="eyebrow">How to score</p>
+            <p><strong>0</strong> No / unknown</p>
+            <p><strong>1</strong> Partly / inconsistent</p>
+            <p><strong>2</strong> Yes / documented and working</p>
+          </div>
+          <button id="view-saved" class="text-button" type="button" hidden>View saved report</button>
+        </aside>
+
+        <form id="assessment-form" novalidate>
+          <div id="step-content"></div>
+          <p id="step-error" class="message message--error" role="alert" hidden></p>
+          <div class="step-controls">
+            <button id="previous-step" class="btn btn--outline" type="button">Back</button>
+            <span id="step-count"></span>
+            <button id="next-step" class="btn" type="submit">Continue <span aria-hidden="true">→</span></button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="results-view" hidden>
+      <div class="results-heading">
+        <div><h1 id="results-title" tabindex="-1">Your results</h1><p id="report-date"></p></div>
+        <button id="edit-answers" class="btn btn--outline" type="button">Edit answers</button>
+      </div>
+      <div id="score-summary"></div>
+      <div class="report-tools" aria-label="Report actions">
+        <button id="print-report" class="btn" type="button">Print / save PDF <span aria-hidden="true">↗</span></button>
+        <a class="btn btn--outline" href="/api/scorecard/export?format=csv" download>Download CSV <span aria-hidden="true">↓</span></a>
+        <a class="text-button" href="/api/scorecard/export?format=txt" download>Download text</a>
+        <button id="email-report" class="text-button" type="button">Email my report again</button>
+      </div>
+      <p id="email-status" class="email-status" role="status"></p>
+      <div id="report-detail"></div>
+
+      <section class="more" aria-labelledby="more-title">
+        <h2 id="more-title">More from DMS</h2>
+        <div class="resources">
+          <article class="resource">
+            <div class="resource__text">
+              <h3>AI governance assessment</h3>
+              <p>Free. The scorecard covers your organization as a whole. This assessment reviews one specific AI system, the data it uses and your current oversight, and gives you a risk overview with gaps and recommended next steps.</p>
+            </div>
+            <div class="resource__actions">
+              <a class="btn" href="https://airmf.strategydms.com">Open the assessment <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          <article class="resource">
+            <div class="resource__text">
+              <h3>Board and executive AI brief</h3>
+              <p>Pick one use of AI from your results. Answer seven questions about it, then print a one-page brief for your board or executive team.</p>
+            </div>
+            <div class="resource__actions">
+              <a class="btn btn--outline" href="/ai-brief">Fill in the brief <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          <article class="resource">
+            <div class="resource__text">
+              <h3>AI rules for staff</h3>
+              <p>List the AI tools your staff may use and the information that must stay out of them, then print the page as a handout.</p>
+            </div>
+            <div class="resource__actions">
+              <a class="btn btn--outline" href="/ai-rules">Fill in the AI rules <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          <article class="resource">
+            <div class="resource__text">
+              <h3>Guide for leaders</h3>
+              <p>Eighteen steps on cybersecurity and AI governance, with questions to ask your IT provider and your AI vendors.</p>
+            </div>
+            <div class="resource__actions">
+              <a class="btn btn--outline" href="/guide">Read the guide <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        </div>
+        <p class="contact-line">To discuss your results with DMS, email <a href="mailto:info@strategydms.com?subject=AI%20readiness%20scorecard%20results">info@strategydms.com</a>.</p>
+      </section>
+    </div>
+  </section>
+
+  <noscript><p class="wrap boot-status">Turn on JavaScript in your browser to use the scorecard.</p></noscript>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot__bar">
+    <img class="foot__logo" src="/static/assets/dms-logo.png" alt="DMS" width="88" height="35">
+    <p>From the DMS Nonprofit Safe AI Toolkit by Javed Sajad. © Dynamic Management Services</p>
+    <p class="foot__visit">You entered <span id="visit-email"></span>. <button id="use-different-email" class="text-button" type="button">Use a different email</button></p>
+    <nav class="foot__links" aria-label="Footer">
+      <a href="https://www.strategydms.com/privacy-policy">Privacy</a>
+      <a href="mailto:info@strategydms.com">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script type="module" src="/static/scorecard.js"></script>
+</body>
+</html>

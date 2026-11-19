@@ -1,0 +1,167 @@
+/* Guide for leaders: the web page and, under @media print, the PDF booklet.
+   The PDF is this same page rendered by scripts/build-guide-pdf.mjs. */
+
+.cover, .print-only { display: none; }
+
+.guide-head { padding-block: clamp(2rem, 1rem + 4vw, 4.5rem) clamp(2rem, 1.2rem + 2.5vw, 3.5rem); }
+.guide-head h1 {
+  max-width: 17ch;
+  font-size: clamp(2.5rem, 1.3rem + 5.4vw, 5.25rem);
+  font-weight: 650;
+  font-variation-settings: "wdth" 108;
+  letter-spacing: -.045em;
+  line-height: .98;
+  text-wrap: balance;
+}
+.guide-head .deck { max-width: 42rem; }
+.guide-head__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.75rem; margin-top: 2rem; }
+.guide-head__date { font: .75rem var(--mono); color: var(--ink-2); }
+.guide-toc { display: flex; flex-wrap: wrap; gap: .5rem 1.75rem; margin-top: 2rem; padding-top: 1.1rem; border-top: 1px solid var(--hair); font-size: .9rem; font-weight: 600; }
+.guide-toc a { color: var(--ink); display: inline-flex; align-items: center; min-height: 44px; }
+/* On the navy cover. */
+.guide-head .btn { background: #fff; color: var(--ink); }
+.guide-head .btn:hover { background: var(--hair); color: var(--ink); }
+.guide-head__date { color: #CCD3DC; }
+.guide-toc { border-top-color: #44566B; }
+.guide-toc a { color: #fff; }
+
+/* --------------------------------------------------------------------------
+   A part: heading, steps, then the questions on a navy band
+   -------------------------------------------------------------------------- */
+
+.guide-part { scroll-margin-top: 1rem; }
+.part-head {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 1rem;
+  padding-block: 1.25rem; border-top: 2px solid var(--ink);
+}
+.part-head h2 {
+  font-size: clamp(1.9rem, 1.3rem + 2.6vw, 3.25rem);
+  font-weight: 650;
+  font-variation-settings: "wdth" 106;
+  letter-spacing: -.04em;
+  line-height: 1.05;
+}
+.part-head p { font: .75rem var(--mono); color: var(--ink-2); white-space: nowrap; }
+
+.steps > li { display: grid; gap: .55rem; padding-block: 1.35rem; border-top: 1px solid var(--hair); }
+.steps h3 { font-size: 1.2rem; font-weight: 650; letter-spacing: -.02em; line-height: 1.25; text-wrap: balance; }
+.steps p { max-width: 41rem; font-size: 1rem; line-height: 1.6; }
+.steps > li:last-child { padding-bottom: clamp(2rem, 1.4rem + 2vw, 3rem); }
+
+@media (min-width: 900px) {
+  .steps > li { grid-template-columns: minmax(0, 1fr) minmax(0, 1.7fr); gap: 3rem; padding-block: 1.6rem; }
+  .steps h3 { font-size: 1.3rem; }
+}
+
+.ask { background: var(--ink); color: #fff; }
+.ask__grid { display: grid; gap: 1.5rem; padding-block: clamp(2rem, 1.4rem + 2.5vw, 3.5rem); }
+.ask h3 { font-size: clamp(1.45rem, 1.2rem + 1.1vw, 2rem); font-weight: 650; letter-spacing: -.03em; line-height: 1.15; text-wrap: balance; }
+.ask li { position: relative; padding: .8rem 0 .8rem 1.5rem; border-top: 1px solid #44566B; font-size: 1rem; line-height: 1.5; max-width: 41rem; }
+.ask li:first-child { border-top: 0; padding-top: 0; }
+.ask li::before { content: ""; position: absolute; left: 0; top: 1.3rem; width: .5rem; height: .5rem; background: #fff; }
+.ask li:first-child::before { top: .5rem; }
+.ask__note { margin-top: 1.25rem; max-width: 41rem; font-size: .9rem; color: #CCD3DC; }
+.ask__note a, .ask__note a:hover { color: #fff; }
+.ask :focus-visible { outline-color: #fff; }
+
+@media (min-width: 900px) {
+  .ask__grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1.7fr); gap: 3rem; }
+}
+
+#ai-governance { margin-top: clamp(2.5rem, 1.5rem + 3vw, 4.5rem); }
+
+/* --------------------------------------------------------------------------
+   After the two parts
+   -------------------------------------------------------------------------- */
+
+.guide-end { padding-block: clamp(2.5rem, 1.5rem + 3vw, 4.5rem); }
+.guide-end__block { padding-block: 1.75rem; border-top: 2px solid var(--ink); scroll-margin-top: 1rem; }
+.guide-end__block h2 { font-size: clamp(1.45rem, 1.2rem + 1.1vw, 2rem); font-weight: 650; letter-spacing: -.03em; line-height: 1.15; }
+.guide-end__block > p { margin-top: .8rem; max-width: 41rem; color: var(--ink-2); }
+.guide-end__block .btn { margin-top: .5rem; }
+.guide-end__contact { font-size: .95rem; }
+
+.links { margin-top: 1.1rem; }
+.links li { display: grid; gap: .25rem; padding-block: .9rem; border-top: 1px solid var(--hair); }
+.links a { font-weight: 650; }
+.links span { max-width: 41rem; font-size: .9rem; color: var(--ink-2); overflow-wrap: anywhere; }
+
+@media (min-width: 900px) {
+  .guide-end__block { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.7fr); column-gap: 3rem; }
+  .guide-end__block > :not(h2) { grid-column: 2; }
+  .guide-end__block > h2 { grid-row: 1 / span 4; }
+  .guide-end__block > h2 + * { margin-top: 0; }
+  .links li:first-child { border-top: 0; padding-top: 0; }
+}
+
+/* --------------------------------------------------------------------------
+   The PDF: half-letter pages, a navy cover, one column
+   -------------------------------------------------------------------------- */
+
+@media print {
+  @page {
+    size: 5.5in 8.5in;
+    margin: .6in .55in .7in;
+    @bottom-right { content: counter(page); font: 7.5pt "IBM Plex Mono", monospace; color: #55637A; }
+    @bottom-left { content: "DMS · Cybersecurity and AI governance: a guide for leaders"; font: 7.5pt "IBM Plex Mono", monospace; color: #55637A; }
+  }
+  @page :first {
+    margin: 0;
+    @bottom-right { content: none; }
+    @bottom-left { content: none; }
+  }
+
+  html { font-size: 9.25pt; }
+  body { line-height: 1.5; }
+  .masthead, .site-foot, .skip-link, .guide-head__actions, .guide-toc, .screen-only { display: none !important; }
+  .print-only { display: inline; }
+  .wrap { max-width: none; padding-inline: 0; }
+  a { color: inherit; text-decoration: none; }
+
+  .cover {
+    display: flex; flex-direction: column; justify-content: space-between;
+    width: 5.5in; height: 8.5in; padding: .7in .6in;
+    background: #0E2135; color: #fff;
+    print-color-adjust: exact; -webkit-print-color-adjust: exact;
+    break-after: page;
+  }
+  .cover__logo { width: 1.75in; }
+  .cover__title { font: 650 30pt/1 var(--display); font-variation-settings: "wdth" 108; letter-spacing: -.04em; }
+  .cover__subtitle { margin-top: .22in; padding-top: .18in; border-top: 2pt solid #fff; font: 500 15pt/1.2 var(--display); letter-spacing: -.01em; }
+  .cover__foot { font: 8pt/1.7 var(--mono); color: #CCD3DC; }
+
+  .guide-head { padding-block: 0 .25in; background: none; color: #0E2135; box-shadow: none; clip-path: none; }
+  .guide-head .eyebrow { display: none; }
+  .guide-head h1 { max-width: none; font-size: 19pt; line-height: 1.08; letter-spacing: -.03em; }
+  .guide-head .deck { margin-top: .14in; font-size: 10pt; line-height: 1.5; color: #0E2135; }
+
+  .part-head { padding-block: .1in; break-after: avoid; }
+  .part-head h2 { font-size: 17pt; }
+  .part-head p { font-size: 7.5pt; }
+  #ai-governance { margin-top: .3in; }
+
+  .steps > li { display: block; padding-block: .1in; break-inside: avoid; }
+  .steps > li:last-child { padding-bottom: .14in; }
+  .steps h3 { font-size: 10.5pt; margin-bottom: .04in; }
+  .steps p { max-width: none; font-size: 9.25pt; line-height: 1.5; }
+
+  .ask { background: #F4F6F8; color: #0E2135; border-top: 2pt solid #0E2135; break-inside: avoid; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+  .ask__grid { display: block; padding: .16in .18in .18in; }
+  .ask h3 { font-size: 11.5pt; margin-bottom: .1in; }
+  .ask li { max-width: none; padding: .055in 0 .055in .16in; border-top-color: #DBE1E8; font-size: 9.25pt; line-height: 1.45; }
+  .ask li::before { background: #0E2135; width: .055in; height: .055in; top: .125in; }
+  .ask li:first-child::before { top: .07in; }
+  .ask__note { margin-top: .1in; max-width: none; font-size: 8.5pt; color: #55637A; }
+  .ask__note a { color: #0E2135; }
+
+  .guide-end { padding-block: .3in 0; }
+  .guide-end__block { display: block; padding-block: .14in; break-inside: avoid; }
+  .guide-end__block h2 { font-size: 12.5pt; }
+  .guide-end__block > p { margin-top: .07in; max-width: none; font-size: 9.25pt; color: #0E2135; }
+  .scorecard-pointer .print-only { font: 500 9pt var(--mono); color: #0E2135; }
+  .links { margin-top: .08in; }
+  .links li { padding-block: .07in; }
+  .links a { font-size: 9.5pt; }
+  .links span { max-width: none; font-size: 8.5pt; }
+  .guide-end__contact { font-size: 9.25pt; }
+}

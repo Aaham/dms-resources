@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>AI vendor questions | DMS resources</title>
+<link rel="icon" href="/static/assets/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/static/assets/apple-touch-icon.png">
+<link rel="preload" href="/static/assets/fonts/archivo-400-900.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/static/assets/fonts.css">
+<link rel="stylesheet" href="/static/styles.css">
+<link rel="stylesheet" href="/static/sheet.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="masthead">
+  <div class="wrap masthead__bar">
+    <a class="masthead__logo" href="/" aria-label="DMS resources"><img src="/static/assets/dms-logo.png" alt="DMS" width="98" height="39"></a>
+    <nav class="masthead__nav" aria-label="Site"><a href="/">All resources</a></nav>
+  </div>
+</header>
+
+<main id="main">
+  <header class="wrap sheet-head">
+    <p id="arrival-note" class="message" role="status" hidden></p>
+    <p class="eyebrow"><span class="eyebrow__mark" aria-hidden="true"></span>25 questions</p>
+    <h1>AI vendor questions</h1>
+    <p class="deck">Send these questions to a vendor before you buy, renew or expand an AI tool, or before sensitive information goes into one. Record each answer and where it is written, then your decision.</p>
+    <p class="sheet-head__note">What you type is saved in this browser. It is not sent to DMS.</p>
+  </header>
+
+  <div class="wrap sheet-layout">
+    <form id="sheet-form" class="sheet-form" novalidate>
+      <fieldset>
+        <legend>The vendor and the tool</legend>
+        <div class="fields">
+          <div><label for="org">Organization name</label><input id="org" name="org" type="text" maxlength="70" autocomplete="organization"></div>
+          <div><label for="vendor">Vendor and product</label><input id="vendor" name="vendor" type="text" maxlength="80" autocomplete="off"></div>
+          <div>
+            <label for="use">What you plan to use it for</label>
+            <textarea id="use" name="use" rows="2" maxlength="200" placeholder="For example: drafting grant reports from program notes"></textarea>
+          </div>
+          <div>
+            <label for="zone">Most sensitive information it will receive</label>
+            <select id="zone" name="zone">
+              <option value="">Choose a level</option>
+              <option value="Public (already published)">Public</option>
+              <option value="Internal (not for release)">Internal</option>
+              <option value="Sensitive (about clients, staff, donors, finances, health, immigration or location)">Sensitive</option>
+              <option value="Regulated (covered by a law, grant, contract or professional duty)">Regulated</option>
+              <option value="Not classified yet">Not classified yet</option>
+            </select>
+            <p class="field-hint">Public is already published. Internal is not for release. Sensitive is about clients, staff, donors, finances, health, immigration or location. Regulated is covered by a law, a grant, a contract or a professional duty.</p>
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="q-send">
+        <p>Send the vendor all 25 questions. Ask for each answer in the contract or the vendor’s written terms, not only from a salesperson.</p>
+        <button id="copy-questions" class="btn btn--outline" type="button">Copy the questions</button>
+        <p id="questions-message" class="message" role="status" hidden></p>
+        <p class="field-hint">As the answers come back, type each one under its question with where it is written, such as the clause number. Then choose your view of it.</p>
+      </div>
+
+      <fieldset data-group>
+        <legend>The tool</legend>
+        <ol class="qs">
+          <li class="q" data-q="parts">Which parts of the product use AI, and what do your terms say we may not use it for?</li>
+          <li class="q" data-q="tested">How have you tested the product for accuracy and for bias, and can we see the results?</li>
+        </ol>
+      </fieldset>
+
+      <fieldset data-group>
+        <legend>How our information is used</legend>
+        <ol class="qs">
+          <li class="q" data-q="training">Do you use what we enter, what the product produces for us, our feedback or our usage data to train or improve any AI model?</li>
+          <li class="q" data-q="purposes">Do you use our information for any purpose other than providing the service to us?</li>
+          <li class="q" data-q="separate">Is our information kept separate from other customers’ information?</li>
+          <li class="q" data-q="staff">Which of your staff can read what we enter, and in what circumstances?</li>
+        </ol>
+      </fieldset>
+
+      <fieldset data-group>
+        <legend>Other companies and locations</legend>
+        <ol class="qs">
+          <li class="q" data-q="companies">Which other companies receive our information, including the AI model provider and the hosting company?</li>
+          <li class="q" data-q="countries">In which countries is our information stored and processed?</li>
+          <li class="q" data-q="agreement">If a law, a grant or a contract covers our information, will you sign the agreement it requires, such as a HIPAA business associate agreement?</li>
+        </ol>
+      </fieldset>
+
+      <fieldset data-group>
+        <legend>Keeping, deleting and exporting</legend>
+        <ol class="qs">
+          <li class="q" data-q="kept">How long do you keep what we enter, what the product produces, logs and backups?</li>
+          <li class="q" data-q="shorter">Can we set a shorter period, or delete items ourselves?</li>
+          <li class="q" data-q="deleted">When the contract ends, how and when is our information deleted, including copies and backups?</li>
+          <li class="q" data-q="export">Can we export our information and our records of decisions in a format we can use elsewhere?</li>
+        </ol>
+      </fieldset>
+
+      <fieldset data-group>
+        <legend>Security</legend>
+        <ol class="qs">
+          <li class="q" data-q="access">Does the product support multi-factor authentication, and can an administrator control what each person can see and do?</li>
+          <li class="q" data-q="encrypted">Is our information encrypted when it is sent and when it is stored?</li>
+          <li class="q" data-q="report">Can you send us a current independent security report or certificate, such as SOC 2 Type II or ISO 27001?</li>
+          <li class="q" data-q="logs">Can we get logs showing who used the product, what they did, what was changed and which sources an answer drew on?</li>
+        </ol>
+      </fieldset>
+
+      <fieldset data-group>
+        <legend>When something goes wrong</legend>
+        <ol class="qs">
+          <li class="q" data-q="notice">How soon must you tell us about a security incident or an unauthorized disclosure of our information?</li>
+          <li class="q" data-q="help">What information and help will you give us to investigate, and to notify the people affected?</li>
+          <li class="q" data-q="responsible">Who is responsible under the contract when a result is inaccurate, discriminatory, harmful or infringes someone’s rights?</li>
+        </ol>
+      </fieldset>
+
+      <fieldset data-group>
+        <legend>Ownership, changes and ending the contract</legend>
+        <ol class="qs">
+          <li class="q" data-q="owns">Do we own what we enter, what the product produces for us, our settings and any knowledge base we build in it?</li>
+          <li class="q" data-q="confidential">Which of your confidentiality duties continue after the contract ends?</li>
+          <li class="q" data-q="changes">How much notice will we get before you change the AI model, the features, the price, the terms, or the companies and countries that handle our information?</li>
+          <li class="q" data-q="object">If we don’t accept a change, can we end the contract without a penalty and take our information with us?</li>
+          <li class="q" data-q="rights">What does the contract say about your insurance, your liability to us, and our rights to audit you and to end the contract early?</li>
+        </ol>
+      </fieldset>
+
+      <fieldset>
+        <legend>Decision</legend>
+        <div class="checks">
+          <label class="check"><input type="radio" name="decision" value="Approve"><span>Approve</span></label>
+          <label class="check"><input type="radio" name="decision" value="Approve with conditions"><span>Approve with conditions</span></label>
+          <label class="check"><input type="radio" name="decision" value="Pilot only"><span>Pilot only</span></label>
+          <label class="check"><input type="radio" name="decision" value="Reject"><span>Reject</span></label>
+        </div>
+        <div class="fields">
+          <div>
+            <label for="conditions">Contract changes and conditions required</label>
+            <textarea id="conditions" name="conditions" rows="3" maxlength="400"></textarea>
+          </div>
+          <div>
+            <label for="owner">Business owner</label>
+            <input id="owner" name="owner" type="text" maxlength="60" autocomplete="off">
+            <p class="field-hint">The person responsible for how the tool is used, not only a technical contact.</p>
+          </div>
+          <div><label for="reviewer">Security or privacy reviewer</label><input id="reviewer" name="reviewer" type="text" maxlength="60" autocomplete="off"></div>
+          <div><label for="renewal">Contract renewal or review date</label><input id="renewal" name="renewal" type="text" maxlength="40" autocomplete="off"></div>
+        </div>
+      </fieldset>
+    </form>
+
+    <div class="sheet-side">
+      <div class="sheet-tools">
+        <button id="print-sheet" class="btn" type="button">Print or save as PDF <span aria-hidden="true">↗</span></button>
+        <button id="copy-sheet" class="btn btn--outline" type="button">Copy as text</button>
+        <button id="clear-sheet" class="text-button" type="button">Clear the form</button>
+        <span id="clear-confirm" class="sheet-tools__confirm" hidden>Clear everything you typed?
+          <button id="clear-yes" class="text-button" type="button">Yes, clear it</button>
+          <button id="clear-no" class="text-button" type="button">Keep it</button>
+        </span>
+      </div>
+      <p id="sheet-status" class="sheet-status" role="status"></p>
+      <p id="sheet-message" class="message" role="status" hidden></p>
+
+      <article id="sheet" class="sheet sheet--record" aria-labelledby="sheet-title">
+        <header class="sheet__head">
+          <p class="sheet__org" data-show="org"></p>
+          <h2 id="sheet-title">AI vendor questions</h2>
+          <dl class="sheet__facts">
+            <div><dt>Vendor and product</dt><dd data-show="vendor"></dd></div>
+            <div><dt>Planned use</dt><dd data-show="use"></dd></div>
+            <div><dt>Most sensitive information</dt><dd data-show="zone"></dd></div>
+          </dl>
+        </header>
+
+        <div id="answers" class="sheet__answers"></div>
+
+        <section class="sheet__dont" aria-labelledby="flags-title">
+          <h3 id="flags-title">Red flags</h3>
+          <ul>
+            <li>“We are compliant”, with no evidence.</li>
+            <li>No clear answer on whether your information trains a model.</li>
+            <li>Information kept indefinitely, or no commitment to delete it.</li>
+            <li>The other companies that receive your information are not named.</li>
+            <li>You would hear about an incident only after it is public.</li>
+            <li>No way to export your information.</li>
+            <li>The vendor can change important terms without your agreement.</li>
+            <li>The contract puts all the responsibility on you.</li>
+          </ul>
+        </section>
+
+        <section class="sheet__decision" aria-labelledby="decision-title">
+          <h3 id="decision-title">Decision</h3>
+          <p class="choice" data-choice="decision"></p>
+          <p id="open-items" class="sheet__open" hidden></p>
+          <dl class="sheet__facts">
+            <div><dt>Contract changes and conditions required</dt><dd class="long" data-show="conditions"></dd></div>
+            <div><dt>Business owner</dt><dd data-show="owner"></dd></div>
+            <div><dt>Security or privacy reviewer</dt><dd data-show="reviewer"></dd></div>
+            <div><dt>Contract renewal or review date</dt><dd data-show="renewal"></dd></div>
+          </dl>
+        </section>
+
+        <footer class="sheet__foot">
+          <p>Recorded <span data-today></span>. Educational material, not legal advice.</p>
+          <p>Adapted from the DMS Nonprofit Safe AI Toolkit by Javed Sajad, at resources.strategydms.com</p>
+        </footer>
+      </article>
+    </div>
+  </div>
+
+  <section class="wrap more" aria-labelledby="more-title">
+    <h2 id="more-title">More from DMS</h2>
+    <div class="resources">
+      <article class="resource">
+        <div class="resource__text">
+          <h3>AI use-case triage</h3>
+          <p>Twenty minutes with DMS on one proposed or existing use of AI. Bring the vendor material you already have. DMS will help you work out whether the use looks suitable to go ahead, needs stronger controls first or calls for a deeper review. The triage is not legal advice or a compliance opinion.</p>
+        </div>
+        <div class="resource__actions">
+          <a class="btn" href="mailto:info@strategydms.com?subject=AI%20use-case%20triage">Request a triage <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+      <article class="resource">
+        <div class="resource__text">
+          <h3>AI governance assessment</h3>
+          <p>Free. These questions cover what the vendor commits to. This assessment reviews one specific AI system, the data it uses and your current oversight, and gives you a risk overview with gaps and recommended next steps.</p>
+        </div>
+        <div class="resource__actions">
+          <a class="btn btn--outline" href="https://airmf.strategydms.com">Open the assessment <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+      <article class="resource">
+        <div class="resource__text">
+          <h3>Board and executive AI brief</h3>
+          <p>Seven questions for leadership to answer before approving a new use of AI. The fifth is what the vendor has committed to.</p>
+        </div>
+        <div class="resource__actions">
+          <a class="btn btn--outline" href="/ai-brief">Fill in the brief <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <noscript><p class="wrap message message--error">Turn on JavaScript in your browser to record the vendor’s answers.</p></noscript>
+</main>
+
+<!-- What the form adds under each question, and the note that goes to the vendor with the copied questions. -->
+<template id="view">
+  <select>
+    <option value="">Not marked yet</option>
+    <option>Acceptable</option>
+    <option data-flag>Needs a change</option>
+    <option data-flag>No answer</option>
+    <option>Doesn’t apply</option>
+  </select>
+</template>
+<template id="questions-note">Please answer each question, and tell us where each answer is written: a clause in the contract, a policy or a page on your website.</template>
+
+<footer class="site-foot">
+  <div class="wrap foot__bar">
+    <img class="foot__logo" src="/static/assets/dms-logo.png" alt="DMS" width="88" height="35">
+    <p>Adapted from the DMS Nonprofit Safe AI Toolkit by Javed Sajad. © Dynamic Management Services</p>
+    <p class="foot__visit">You entered <span id="visit-email"></span>. <button id="use-different-email" class="text-button" type="button">Use a different email</button></p>
+    <nav class="foot__links" aria-label="Footer">
+      <a href="https://www.strategydms.com">strategydms.com</a>
+      <a href="https://www.strategydms.com/privacy-policy">Privacy</a>
+      <a href="mailto:info@strategydms.com">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script type="module" src="/static/vendor-questions.js"></script>
+</body>
+</html>

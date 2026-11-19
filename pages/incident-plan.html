@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>One-page incident plan | DMS resources</title>
+<link rel="icon" href="/static/assets/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/static/assets/apple-touch-icon.png">
+<link rel="preload" href="/static/assets/fonts/archivo-400-900.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/static/assets/fonts.css">
+<link rel="stylesheet" href="/static/styles.css">
+<link rel="stylesheet" href="/static/sheet.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="masthead">
+  <div class="wrap masthead__bar">
+    <a class="masthead__logo" href="/" aria-label="DMS resources"><img src="/static/assets/dms-logo.png" alt="DMS" width="98" height="39"></a>
+    <nav class="masthead__nav" aria-label="Site"><a href="/">All resources</a></nav>
+  </div>
+</header>
+
+<main id="main">
+  <header class="wrap sheet-head">
+    <p id="arrival-note" class="message" role="status" hidden></p>
+    <p class="eyebrow"><span class="eyebrow__mark" aria-hidden="true"></span>9 steps</p>
+    <h1>One-page incident plan</h1>
+    <p class="deck">Fill in who decides and who to call if your organization is hacked, locked out of its systems or tricked into sending money. Then print the page and keep a copy where you can find it without a computer.</p>
+    <p class="sheet-head__note">What you type is saved in this browser. It is not sent to DMS.</p>
+  </header>
+
+  <div class="wrap sheet-layout">
+    <form id="sheet-form" class="sheet-form" novalidate>
+      <fieldset>
+        <legend>Your organization</legend>
+        <div class="fields">
+          <div><label for="org">Organization name</label><input id="org" name="org" type="text" maxlength="70" autocomplete="organization"></div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Person in charge</legend>
+        <p class="field-hint">Whoever makes the decisions during an incident, and the person who takes over if they can’t be reached.</p>
+        <div class="fields fields--pair">
+          <div><label for="lead">Name</label><input id="lead" name="lead" type="text" maxlength="60" autocomplete="off"></div>
+          <div><label for="lead-phone">Phone</label><input id="lead-phone" name="leadPhone" type="tel" maxlength="30" autocomplete="off"></div>
+          <div><label for="backup">Backup: name</label><input id="backup" name="backup" type="text" maxlength="60" autocomplete="off"></div>
+          <div><label for="backup-phone">Backup: phone</label><input id="backup-phone" name="backupPhone" type="tel" maxlength="30" autocomplete="off"></div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>IT provider or IT staff</legend>
+        <div class="fields fields--pair">
+          <div><label for="it">Name or company</label><input id="it" name="it" type="text" maxlength="60" autocomplete="off"></div>
+          <div><label for="it-phone">Phone</label><input id="it-phone" name="itPhone" type="tel" maxlength="30" autocomplete="off"></div>
+          <div class="fields__after"><label for="it-after">After-hours phone</label><input id="it-after" name="itAfter" type="tel" maxlength="30" autocomplete="off"></div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Cyber insurer</legend>
+        <p class="field-hint">If you don’t have cyber insurance, leave these blank.</p>
+        <div class="fields fields--pair">
+          <div><label for="insurer">Insurance company</label><input id="insurer" name="insurer" type="text" maxlength="60" autocomplete="off"></div>
+          <div><label for="policy">Policy number</label><input id="policy" name="policy" type="text" maxlength="40" autocomplete="off"></div>
+          <div class="fields__after"><label for="claims">Claims phone line</label><input id="claims" name="claims" type="tel" maxlength="30" autocomplete="off"></div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Bank</legend>
+        <div class="fields fields--pair">
+          <div><label for="bank">Bank name</label><input id="bank" name="bank" type="text" maxlength="60" autocomplete="off"></div>
+          <div><label for="bank-fraud">Number to report fraud</label><input id="bank-fraud" name="bankFraud" type="tel" maxlength="30" autocomplete="off"></div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Lawyer</legend>
+        <div class="fields fields--pair">
+          <div><label for="lawyer">Name or firm</label><input id="lawyer" name="lawyer" type="text" maxlength="60" autocomplete="off"></div>
+          <div><label for="lawyer-phone">Phone</label><input id="lawyer-phone" name="lawyerPhone" type="tel" maxlength="30" autocomplete="off"></div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Board chair or owner</legend>
+        <div class="fields fields--pair">
+          <div><label for="board">Name</label><input id="board" name="board" type="text" maxlength="60" autocomplete="off"></div>
+          <div><label for="board-phone">Phone</label><input id="board-phone" name="boardPhone" type="tel" maxlength="30" autocomplete="off"></div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Staff and the public</legend>
+        <div class="fields">
+          <div>
+            <label for="reach">How you’ll reach staff if email is down</label>
+            <textarea id="reach" name="reach" rows="2" maxlength="160" placeholder="For example: a group text from the office manager’s phone"></textarea>
+          </div>
+          <div>
+            <label for="spokesperson">Who speaks for the organization</label>
+            <input id="spokesperson" name="spokesperson" type="text" maxlength="60" autocomplete="off">
+            <p class="field-hint">One person answers clients, funders and reporters.</p>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+
+    <div class="sheet-side">
+      <div class="sheet-tools">
+        <button id="print-sheet" class="btn" type="button">Print or save as PDF <span aria-hidden="true">↗</span></button>
+        <button id="copy-sheet" class="btn btn--outline" type="button">Copy as text</button>
+        <button id="clear-sheet" class="text-button" type="button">Clear the form</button>
+        <span id="clear-confirm" class="sheet-tools__confirm" hidden>Clear everything you typed?
+          <button id="clear-yes" class="text-button" type="button">Yes, clear it</button>
+          <button id="clear-no" class="text-button" type="button">Keep it</button>
+        </span>
+      </div>
+      <p id="sheet-status" class="sheet-status" role="status"></p>
+      <p id="sheet-message" class="message" role="status" hidden></p>
+
+      <article id="sheet" class="sheet" aria-labelledby="sheet-title">
+        <header class="sheet__head">
+          <p class="sheet__org" data-show="org" data-label="your organization’s name"></p>
+          <h2 id="sheet-title">Incident plan</h2>
+          <p>What to do if we are hacked, locked out of our systems or tricked into sending money.</p>
+        </header>
+
+        <ol class="sheet__steps">
+          <li>
+            <h3>Call the person in charge</h3>
+            <p class="sheet__who"><span data-show="lead" data-label="the person in charge"></span>, <span data-show="leadPhone" data-label="the phone number of the person in charge"></span></p>
+            <p class="sheet__who">If they can’t be reached: <span data-show="backup" data-label="the backup person"></span>, <span data-show="backupPhone" data-label="the backup person’s phone number"></span></p>
+            <p>This person makes the decisions until the incident is over.</p>
+          </li>
+          <li>
+            <h3>Disconnect affected computers from the network</h3>
+            <p>Unplug the network cable and turn off Wi-Fi. Leave the computers switched on, so IT can examine them. Turn one off only if you can’t disconnect it.</p>
+          </li>
+          <li>
+            <h3>Call IT</h3>
+            <p class="sheet__who"><span data-show="it" data-label="your IT provider"></span>, <span data-show="itPhone" data-label="your IT provider’s phone number"></span>. After hours: <span data-show="itAfter" data-label="the after-hours IT number"></span></p>
+          </li>
+          <li>
+            <h3>Call the insurer before you hire or pay anyone</h3>
+            <p class="sheet__who"><span data-show="insurer" data-label="your cyber insurer"></span>, policy <span data-show="policy" data-label="the insurance policy number"></span>. Claims line: <span data-show="claims" data-label="the insurer’s claims line"></span></p>
+            <p>Many policies pay only for firms the insurer has approved.</p>
+          </li>
+          <li>
+            <h3>If money was sent, call the bank now</h3>
+            <p class="sheet__who"><span data-show="bank" data-label="your bank"></span>, <span data-show="bankFraud" data-label="the bank’s fraud number"></span></p>
+            <p>Ask the bank to recall the payment, then report it at ic3.gov. A bank can sometimes stop a transfer if it hears quickly.</p>
+          </li>
+          <li>
+            <h3>Call the lawyer</h3>
+            <p class="sheet__who"><span data-show="lawyer" data-label="your lawyer"></span>, <span data-show="lawyerPhone" data-label="the lawyer’s phone number"></span></p>
+            <p>Ask whether the law requires you to notify the people whose information was exposed, or a regulator, and by when.</p>
+          </li>
+          <li>
+            <h3>Tell the board chair or owner</h3>
+            <p class="sheet__who"><span data-show="board" data-label="the board chair or owner"></span>, <span data-show="boardPhone" data-label="the board chair or owner’s phone number"></span></p>
+          </li>
+          <li>
+            <h3>Reach staff without email</h3>
+            <p class="sheet__who"><span data-show="reach" data-label="how you’ll reach staff without email"></span></p>
+            <p>If an email account may be affected, don’t discuss the incident by email. Use the phone.</p>
+          </li>
+          <li>
+            <h3>One person speaks for the organization</h3>
+            <p class="sheet__who"><span data-show="spokesperson" data-label="who speaks for the organization"></span></p>
+            <p>This person answers clients, funders and reporters. Everyone else refers questions to them.</p>
+          </li>
+        </ol>
+
+        <section class="sheet__dont" aria-labelledby="dont-title">
+          <h3 id="dont-title">Until IT, the insurer and the lawyer agree</h3>
+          <ul>
+            <li>Don’t pay a ransom or reply to the attacker.</li>
+            <li>Don’t wipe or reinstall an affected computer. IT needs to save the evidence first.</li>
+          </ul>
+          <p>Keep notes of what happened, when, and what you did.</p>
+        </section>
+
+        <footer class="sheet__foot">
+          <p>Reviewed <span data-today></span>. Check the names and numbers once a year.</p>
+          <p>From the DMS resources at resources.strategydms.com</p>
+        </footer>
+      </article>
+    </div>
+  </div>
+
+  <section class="wrap more" aria-labelledby="more-title">
+    <h2 id="more-title">More from DMS</h2>
+    <div class="resources">
+      <article class="resource">
+        <div class="resource__text">
+          <h3>Cybersecurity governance assessment</h3>
+          <p>Free. The incident plan is for the day something goes wrong. This assessment looks at your security practices before then, and gives you a scored report showing where you have gaps and which improvements to prioritize.</p>
+        </div>
+        <div class="resource__actions">
+          <a class="btn" href="https://cybergovernance.strategydms.com">Open the assessment <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+      <article class="resource">
+        <div class="resource__text">
+          <h3>Security awareness training</h3>
+          <p>The plan starts when a staff member notices something and calls the person in charge. The training has lessons suited to staff roles, from recognizing payment fraud to protecting administrator access, with completion tracking and certificates.</p>
+        </div>
+        <div class="resource__actions">
+          <a class="btn btn--outline" href="https://awareness.strategydms.com">See the training <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+    </div>
+    <p class="contact-line">To talk to DMS about your incident plan, email <a href="mailto:info@strategydms.com?subject=Incident%20plan">info@strategydms.com</a>.</p>
+  </section>
+
+  <noscript><p class="wrap message message--error">Turn on JavaScript in your browser to fill in the incident plan.</p></noscript>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot__bar">
+    <img class="foot__logo" src="/static/assets/dms-logo.png" alt="DMS" width="88" height="35">
+    <p class="foot__visit">You entered <span id="visit-email"></span>. <button id="use-different-email" class="text-button" type="button">Use a different email</button></p>
+    <nav class="foot__links" aria-label="Footer">
+      <a href="https://www.strategydms.com">strategydms.com</a>
+      <a href="https://www.strategydms.com/privacy-policy">Privacy</a>
+      <a href="mailto:info@strategydms.com">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script type="module" src="/static/incident-plan.js"></script>
+</body>
+</html>

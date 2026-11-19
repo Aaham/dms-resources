@@ -1,0 +1,15 @@
+.git
+.gitignore
+.railway
+node_modules
+.env
+.env.*
+!.env.example
+data
+temp
+tmp
+coverage
+test-results
+playwright-report
+*.log
+*:Zone.Identifier

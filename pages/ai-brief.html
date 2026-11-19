@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Board and executive AI brief | DMS resources</title>
+<link rel="icon" href="/static/assets/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/static/assets/apple-touch-icon.png">
+<link rel="preload" href="/static/assets/fonts/archivo-400-900.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/static/assets/fonts.css">
+<link rel="stylesheet" href="/static/styles.css">
+<link rel="stylesheet" href="/static/sheet.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="masthead">
+  <div class="wrap masthead__bar">
+    <a class="masthead__logo" href="/" aria-label="DMS resources"><img src="/static/assets/dms-logo.png" alt="DMS" width="98" height="39"></a>
+    <nav class="masthead__nav" aria-label="Site"><a href="/">All resources</a></nav>
+  </div>
+</header>
+
+<main id="main">
+  <header class="wrap sheet-head">
+    <p id="arrival-note" class="message" role="status" hidden></p>
+    <p class="eyebrow"><span class="eyebrow__mark" aria-hidden="true"></span>7 questions</p>
+    <h1>Board and executive AI brief</h1>
+    <p class="deck">Seven questions for leadership to answer before approving a new use of AI. Fill in the answers and print a one-page brief for your board or executive team.</p>
+    <p class="sheet-head__note">What you type is saved in this browser. It is not sent to DMS.</p>
+  </header>
+
+  <div class="wrap sheet-layout">
+    <form id="sheet-form" class="sheet-form" novalidate>
+      <fieldset>
+        <legend>The proposal</legend>
+        <div class="fields">
+          <div><label for="org">Organization name</label><input id="org" name="org" type="text" maxlength="70" autocomplete="organization"></div>
+          <div>
+            <label for="use">The use of AI you’re proposing</label>
+            <input id="use" name="use" type="text" maxlength="110" autocomplete="off" placeholder="For example: drafting replies to routine client emails">
+            <p class="field-hint">Write one brief for each use. “AI for the whole organization” is too broad to decide on.</p>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>1. What problem are we solving?</legend>
+        <div class="fields">
+          <div>
+            <label for="problem">The problem today</label>
+            <textarea id="problem" name="problem" rows="3" maxlength="240"></textarea>
+            <p class="field-hint">How often the work comes up, and what it costs now in time, money, delays or errors.</p>
+          </div>
+          <div>
+            <label for="result">The result you want</label>
+            <textarea id="result" name="result" rows="2" maxlength="200"></textarea>
+            <p class="field-hint">Something you can measure, and why a tool is needed to get there.</p>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>2. What information will the tool receive?</legend>
+        <div class="fields">
+          <div>
+            <label for="info">The information</label>
+            <textarea id="info" name="info" rows="2" maxlength="200"></textarea>
+            <p class="field-hint">Describe the kinds of information, such as intake notes or donor records. Don’t type the information itself.</p>
+          </div>
+          <div>
+            <label for="zone">Its most sensitive level</label>
+            <select id="zone" name="zone">
+              <option value="">Choose a level</option>
+              <option value="Public (already published)">Public</option>
+              <option value="Internal (not for release)">Internal</option>
+              <option value="Sensitive (about clients, staff, donors, finances, health, immigration or location)">Sensitive</option>
+              <option value="Regulated (covered by a law, grant, contract or professional duty)">Regulated</option>
+              <option value="Not classified yet">Not classified yet</option>
+            </select>
+            <p class="field-hint">Public is already published. Internal is not for release. Sensitive is about clients, staff, donors, finances, health, immigration or location. Regulated is covered by a law, a grant, a contract or a professional duty.</p>
+          </div>
+          <div>
+            <label for="duties">Laws, contracts and promises that cover it</label>
+            <input id="duties" name="duties" type="text" maxlength="160" autocomplete="off">
+            <p class="field-hint">For example: HIPAA, a grant agreement, a professional duty of confidentiality, your privacy notice.</p>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>3. Who could be affected if it is wrong?</legend>
+        <div class="fields">
+          <div>
+            <label for="people">The people affected, and what a mistake would mean for them</label>
+            <textarea id="people" name="people" rows="3" maxlength="240"></textarea>
+            <p class="field-hint">Think of clients, applicants, staff, donors, partners and the public. Name groups, not individuals.</p>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>4. What remains a human decision?</legend>
+        <div class="fields">
+          <div>
+            <label for="may">What the tool may do</label>
+            <textarea id="may" name="may" rows="2" maxlength="160"></textarea>
+            <p class="field-hint">For example: draft, summarize, sort or recommend.</p>
+          </div>
+          <div>
+            <label for="human">What a person must still decide</label>
+            <textarea id="human" name="human" rows="2" maxlength="160"></textarea>
+          </div>
+          <div>
+            <label for="reviewer">Who reviews the tool’s output</label>
+            <input id="reviewer" name="reviewer" type="text" maxlength="80" autocomplete="off">
+            <p class="field-hint">Someone who knows the work, has the time to check it and can reject it.</p>
+          </div>
+          <div>
+            <label for="appeal">How a person affected can ask for a correction or a review</label>
+            <input id="appeal" name="appeal" type="text" maxlength="140" autocomplete="off">
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>5. What has the vendor committed to?</legend>
+        <div class="fields">
+          <div><label for="vendor">Vendor and product</label><input id="vendor" name="vendor" type="text" maxlength="80" autocomplete="off"></div>
+          <div>
+            <label for="terms">What the contract or written terms say</label>
+            <textarea id="terms" name="terms" rows="3" maxlength="280"></textarea>
+            <p class="field-hint">Cover whether your information trains a model, how long it is kept, how it is deleted, security, notice of incidents, the other companies that receive it and changes to the terms. The <a href="/vendor-questions">AI vendor questions</a> ask about each.</p>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>6. How will we know whether it works?</legend>
+        <div class="fields">
+          <div>
+            <label for="measures">What you’ll measure, and today’s figure for each</label>
+            <textarea id="measures" name="measures" rows="3" maxlength="240"></textarea>
+            <p class="field-hint">Include the time or money saved, the quality of the work, and whether the people affected are treated fairly and still trust it.</p>
+          </div>
+          <div><label for="trial">Length of the trial</label><input id="trial" name="trial" type="text" maxlength="40" autocomplete="off" placeholder="For example: 8 weeks"></div>
+          <div><label for="decide-by">Date you’ll decide whether to continue</label><input id="decide-by" name="decideBy" type="text" maxlength="40" autocomplete="off"></div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>7. Who can stop it?</legend>
+        <div class="fields">
+          <div>
+            <label for="sponsor">Executive sponsor</label>
+            <input id="sponsor" name="sponsor" type="text" maxlength="60" autocomplete="off">
+            <p class="field-hint">The leader who can fund the use, change it or stop it.</p>
+          </div>
+          <div><label for="owner">Who runs it day to day</label><input id="owner" name="owner" type="text" maxlength="60" autocomplete="off"></div>
+          <div><label for="report">Where staff report a problem</label><input id="report" name="report" type="text" maxlength="80" autocomplete="off"></div>
+          <div>
+            <label for="stop">What would make you stop</label>
+            <textarea id="stop" name="stop" rows="2" maxlength="200" placeholder="For example: a wrong answer reaches a client"></textarea>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Decision</legend>
+        <p class="field-hint">To record the decision at the meeting, leave this part blank and print the brief.</p>
+        <div class="checks">
+          <label class="check"><input type="radio" name="decision" value="Proceed"><span>Proceed</span></label>
+          <label class="check"><input type="radio" name="decision" value="Proceed with conditions"><span>Proceed with conditions</span></label>
+          <label class="check"><input type="radio" name="decision" value="Pause"><span>Pause</span></label>
+          <label class="check"><input type="radio" name="decision" value="Decline"><span>Decline</span></label>
+        </div>
+        <div class="fields">
+          <div>
+            <label for="conditions">Conditions to meet first</label>
+            <textarea id="conditions" name="conditions" rows="3" maxlength="240"></textarea>
+          </div>
+          <div>
+            <label for="training">How staff will be trained before they use it</label>
+            <input id="training" name="training" type="text" maxlength="160" autocomplete="off">
+          </div>
+          <div><label for="review">Next review date</label><input id="review" name="review" type="text" maxlength="40" autocomplete="off"></div>
+        </div>
+      </fieldset>
+    </form>
+
+    <div class="sheet-side">
+      <div class="sheet-tools">
+        <button id="print-sheet" class="btn" type="button">Print or save as PDF <span aria-hidden="true">↗</span></button>
+        <button id="copy-sheet" class="btn btn--outline" type="button">Copy as text</button>
+        <button id="clear-sheet" class="text-button" type="button">Clear the form</button>
+        <span id="clear-confirm" class="sheet-tools__confirm" hidden>Clear everything you typed?
+          <button id="clear-yes" class="text-button" type="button">Yes, clear it</button>
+          <button id="clear-no" class="text-button" type="button">Keep it</button>
+        </span>
+      </div>
+      <p id="sheet-status" class="sheet-status" role="status"></p>
+      <p id="sheet-message" class="message" role="status" hidden></p>
+
+      <article id="sheet" class="sheet sheet--brief" aria-labelledby="sheet-title">
+        <header class="sheet__head">
+          <p class="sheet__org" data-show="org" data-label="your organization’s name"></p>
+          <h2 id="sheet-title">Board and executive AI brief</h2>
+          <dl class="sheet__facts">
+            <div><dt>Proposed use</dt><dd data-show="use" data-label="the proposed use"></dd></div>
+          </dl>
+        </header>
+
+        <ol class="sheet__steps">
+          <li>
+            <h3>What problem are we solving?</h3>
+            <dl class="sheet__facts">
+              <div><dt>Today</dt><dd class="long" data-show="problem" data-label="the problem today"></dd></div>
+              <div><dt>Result we want</dt><dd data-show="result" data-label="the result you want"></dd></div>
+            </dl>
+          </li>
+          <li>
+            <h3>What information will the tool receive?</h3>
+            <dl class="sheet__facts">
+              <div><dt>Information</dt><dd data-show="info" data-label="the information"></dd></div>
+              <div><dt>Most sensitive level</dt><dd data-show="zone" data-label="the most sensitive level"></dd></div>
+              <div><dt>Covered by</dt><dd data-show="duties" data-label="what covers the information"></dd></div>
+            </dl>
+          </li>
+          <li>
+            <h3>Who could be affected if it is wrong?</h3>
+            <dl class="sheet__facts">
+              <div><dt>People affected</dt><dd class="long" data-show="people" data-label="the people affected"></dd></div>
+            </dl>
+          </li>
+          <li>
+            <h3>What remains a human decision?</h3>
+            <dl class="sheet__facts">
+              <div><dt>The tool may</dt><dd data-show="may" data-label="what the tool may do"></dd></div>
+              <div><dt>A person decides</dt><dd data-show="human" data-label="what a person must still decide"></dd></div>
+              <div><dt>Reviewer</dt><dd data-show="reviewer" data-label="the reviewer"></dd></div>
+              <div><dt>Correction or review</dt><dd data-show="appeal" data-label="how to ask for a correction or a review"></dd></div>
+            </dl>
+          </li>
+          <li>
+            <h3>What has the vendor committed to?</h3>
+            <dl class="sheet__facts">
+              <div><dt>Vendor and product</dt><dd data-show="vendor" data-label="the vendor and product"></dd></div>
+              <div><dt>Written terms</dt><dd class="long" data-show="terms" data-label="what the written terms say"></dd></div>
+            </dl>
+          </li>
+          <li>
+            <h3>How will we know whether it works?</h3>
+            <dl class="sheet__facts">
+              <div><dt>Measures</dt><dd class="long" data-show="measures" data-label="what you’ll measure"></dd></div>
+              <div><dt>Trial length</dt><dd data-show="trial" data-label="the length of the trial"></dd></div>
+              <div><dt>Decide by</dt><dd data-show="decideBy" data-label="the date you’ll decide"></dd></div>
+            </dl>
+          </li>
+          <li>
+            <h3>Who can stop it?</h3>
+            <dl class="sheet__facts">
+              <div><dt>Executive sponsor</dt><dd data-show="sponsor" data-label="the executive sponsor"></dd></div>
+              <div><dt>Runs it day to day</dt><dd data-show="owner" data-label="who runs it day to day"></dd></div>
+              <div><dt>Report a problem to</dt><dd data-show="report" data-label="where staff report a problem"></dd></div>
+              <div><dt>We stop if</dt><dd data-show="stop" data-label="what would make you stop"></dd></div>
+            </dl>
+          </li>
+        </ol>
+
+        <section class="sheet__decision" aria-labelledby="decision-title">
+          <h3 id="decision-title">Decision</h3>
+          <p class="choice" data-choice="decision"></p>
+          <dl class="sheet__facts">
+            <div><dt>Conditions to meet first</dt><dd data-show="conditions"></dd></div>
+            <div><dt>Staff training</dt><dd data-show="training"></dd></div>
+            <div><dt>Next review date</dt><dd data-show="review"></dd></div>
+          </dl>
+        </section>
+
+        <footer class="sheet__foot">
+          <p>Prepared <span data-today></span>. Educational material, not legal advice.</p>
+          <p>Adapted from the DMS Nonprofit Safe AI Toolkit by Javed Sajad, at resources.strategydms.com</p>
+        </footer>
+      </article>
+    </div>
+  </div>
+
+  <section class="wrap more" aria-labelledby="more-title">
+    <h2 id="more-title">More from DMS</h2>
+    <div class="resources">
+      <article class="resource">
+        <div class="resource__text">
+          <h3>AI use-case triage</h3>
+          <p>Twenty minutes with DMS on one proposed or existing use of AI. Bring the brief as far as you have filled it in. DMS will help you work out whether the use looks suitable to go ahead, needs stronger controls first or calls for a deeper review. The triage is not legal advice or a compliance opinion.</p>
+        </div>
+        <div class="resource__actions">
+          <a class="btn" href="mailto:info@strategydms.com?subject=AI%20use-case%20triage">Request a triage <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+      <article class="resource">
+        <div class="resource__text">
+          <h3>AI governance assessment</h3>
+          <p>Free. The brief records what leadership decided. This assessment reviews one specific AI system, the data it uses and your current oversight, and gives you a risk overview with gaps and recommended next steps.</p>
+        </div>
+        <div class="resource__actions">
+          <a class="btn btn--outline" href="https://airmf.strategydms.com">Open the assessment <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+      <article class="resource">
+        <div class="resource__text">
+          <h3>AI vendor questions</h3>
+          <p>Twenty-five questions to send a vendor before you buy or renew an AI tool, with space to record each answer and your decision.</p>
+        </div>
+        <div class="resource__actions">
+          <a class="btn btn--outline" href="/vendor-questions">Open the vendor questions <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <noscript><p class="wrap message message--error">Turn on JavaScript in your browser to fill in the brief.</p></noscript>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot__bar">
+    <img class="foot__logo" src="/static/assets/dms-logo.png" alt="DMS" width="88" height="35">
+    <p>Adapted from the DMS Nonprofit Safe AI Toolkit by Javed Sajad. © Dynamic Management Services</p>
+    <p class="foot__visit">You entered <span id="visit-email"></span>. <button id="use-different-email" class="text-button" type="button">Use a different email</button></p>
+    <nav class="foot__links" aria-label="Footer">
+      <a href="https://www.strategydms.com">strategydms.com</a>
+      <a href="https://www.strategydms.com/privacy-policy">Privacy</a>
+      <a href="mailto:info@strategydms.com">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script type="module" src="/static/ai-brief.js"></script>
+</body>
+</html>

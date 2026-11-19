@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Runtime data: visitor email addresses and submitted scorecards
+data/
+
+# Local working files
+/temp/
+/tmp/
+
+# Generated test output
+coverage/
+test-results/
+playwright-report/
+
+# Logs
+*.log
+
+# WSL / Windows / macOS artifacts
+*:Zone.Identifier
+Thumbs.db
+.DS_Store

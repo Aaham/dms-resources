@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>DMS resources</title>
+<link rel="icon" href="/static/assets/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/static/assets/apple-touch-icon.png">
+<link rel="preload" href="/static/assets/fonts/archivo-400-900.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/static/assets/fonts.css">
+<link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="masthead">
+  <div class="wrap masthead__bar">
+    <a class="masthead__logo" href="/" aria-label="DMS resources"><img src="/static/assets/dms-logo.png" alt="DMS" width="98" height="39"></a>
+    <nav class="masthead__nav" aria-label="Site"><a id="staff-link" href="/ops" hidden>Staff view</a></nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap page-head">
+    <h1>DMS resources</h1>
+    <p id="arrival-note" class="message" role="status" hidden></p>
+  </div>
+
+  <div class="band library">
+    <div class="wrap">
+    <div class="resources">
+      <article class="resource">
+        <div class="resource__text">
+          <p class="resource__type">20 statements</p>
+          <h2>AI readiness scorecard</h2>
+          <p>Rate 20 statements about how your organization uses AI. You get a score out of 40 and suggested next steps, and we email you the report.</p>
+          <p id="scorecard-status" class="resource__status" role="status" hidden></p>
+        </div>
+        <div class="resource__actions">
+          <a id="scorecard-link" class="btn" href="/scorecard">Open the scorecard <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+
+      <article class="resource">
+        <div class="resource__text">
+          <p class="resource__type">18 steps</p>
+          <h2>Cybersecurity and AI governance: a guide for leaders</h2>
+          <p>Eighteen steps for leadership on cybersecurity and AI governance, with questions to ask your IT provider and your AI vendors.</p>
+        </div>
+        <div class="resource__actions">
+          <a class="btn" href="/guide">Read the guide <span aria-hidden="true">→</span></a>
+          <a href="/guide.pdf" download>Download the PDF (8 pages)</a>
+        </div>
+      </article>
+
+      <article class="resource">
+        <div class="resource__text">
+          <p class="resource__type">9 steps</p>
+          <h2>One-page incident plan</h2>
+          <p>Fill in who decides and who to call if your organization is hacked, locked out of its systems or tricked into sending money, then print the page.</p>
+        </div>
+        <div class="resource__actions">
+          <a class="btn" href="/incident-plan">Fill in the incident plan <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+
+      <article class="resource">
+        <div class="resource__text">
+          <p class="resource__type">6 rules</p>
+          <h2>AI rules for staff</h2>
+          <p>List the AI tools your staff may use and the information that must stay out of them, then print the page as a handout.</p>
+        </div>
+        <div class="resource__actions">
+          <a class="btn" href="/ai-rules">Fill in the AI rules <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+
+      <article class="resource">
+        <div class="resource__text">
+          <p class="resource__type">7 questions</p>
+          <h2>Board and executive AI brief</h2>
+          <p>Answer seven questions about a new use of AI, then print a one-page brief for your board or executive team.</p>
+        </div>
+        <div class="resource__actions">
+          <a class="btn" href="/ai-brief">Fill in the brief <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+
+      <article class="resource">
+        <div class="resource__text">
+          <p class="resource__type">25 questions</p>
+          <h2>AI vendor questions</h2>
+          <p>Send a vendor 25 questions before you buy or renew an AI tool, record each answer and your decision, then print the record.</p>
+        </div>
+        <div class="resource__actions">
+          <a class="btn" href="/vendor-questions">Open the vendor questions <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+    </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <p class="contact-line">To talk to DMS about any of these, email <a href="mailto:info@strategydms.com">info@strategydms.com</a>.</p>
+  </div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot__bar">
+    <img class="foot__logo" src="/static/assets/dms-logo.png" alt="DMS" width="88" height="35">
+    <p class="foot__visit">You entered <span id="visit-email"></span>. <button id="use-different-email" class="text-button" type="button">Use a different email</button></p>
+    <nav class="foot__links" aria-label="Footer">
+      <a href="https://www.strategydms.com">strategydms.com</a>
+      <a href="https://www.strategydms.com/privacy-policy">Privacy</a>
+      <a href="mailto:info@strategydms.com">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script type="module" src="/static/resources.js"></script>
+</body>
+</html>

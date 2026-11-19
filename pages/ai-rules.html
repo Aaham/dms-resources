@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>AI rules for staff | DMS resources</title>
+<link rel="icon" href="/static/assets/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/static/assets/apple-touch-icon.png">
+<link rel="preload" href="/static/assets/fonts/archivo-400-900.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/static/assets/fonts.css">
+<link rel="stylesheet" href="/static/styles.css">
+<link rel="stylesheet" href="/static/sheet.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="masthead">
+  <div class="wrap masthead__bar">
+    <a class="masthead__logo" href="/" aria-label="DMS resources"><img src="/static/assets/dms-logo.png" alt="DMS" width="98" height="39"></a>
+    <nav class="masthead__nav" aria-label="Site"><a href="/">All resources</a></nav>
+  </div>
+</header>
+
+<main id="main">
+  <header class="wrap sheet-head">
+    <p id="arrival-note" class="message" role="status" hidden></p>
+    <p class="eyebrow"><span class="eyebrow__mark" aria-hidden="true"></span>6 rules</p>
+    <h1>AI rules for staff</h1>
+    <p class="deck">List the AI tools your staff may use and the information that must stay out of them. You get a one-page handout to print or paste into your own document.</p>
+    <p class="sheet-head__note">What you type is saved in this browser. It is not sent to DMS.</p>
+  </header>
+
+  <div class="wrap sheet-layout">
+    <form id="sheet-form" class="sheet-form" novalidate>
+      <fieldset>
+        <legend>Your organization</legend>
+        <div class="fields">
+          <div><label for="org">Organization name</label><input id="org" name="org" type="text" maxlength="70" autocomplete="organization"></div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Approved tools</legend>
+        <p class="field-hint">List each AI tool staff may use and the work it is approved for. Include the AI features in software you already use.</p>
+        <div class="tool-head" aria-hidden="true"><span>Tool</span><span>Approved for</span></div>
+        <div id="tool-rows" class="tool-rows">
+          <div class="tool-row">
+            <input name="tool" data-row type="text" maxlength="50" autocomplete="off" aria-label="Tool 1">
+            <input name="use" data-row type="text" maxlength="80" autocomplete="off" aria-label="Tool 1 is approved for">
+          </div>
+          <div class="tool-row">
+            <input name="tool" data-row type="text" maxlength="50" autocomplete="off" aria-label="Tool 2">
+            <input name="use" data-row type="text" maxlength="80" autocomplete="off" aria-label="Tool 2 is approved for">
+          </div>
+          <div class="tool-row">
+            <input name="tool" data-row type="text" maxlength="50" autocomplete="off" aria-label="Tool 3">
+            <input name="use" data-row type="text" maxlength="80" autocomplete="off" aria-label="Tool 3 is approved for">
+          </div>
+        </div>
+        <button id="add-tool" class="text-button" type="button">Add another tool</button>
+      </fieldset>
+
+      <fieldset id="never">
+        <legend>Information that stays out of AI tools</legend>
+        <p class="field-hint">Untick a line if it doesn’t apply to your organization.</p>
+        <div class="checks">
+          <label class="check"><input type="checkbox" name="never" value="clients" checked><span>Information about clients, including names and case notes</span></label>
+          <label class="check"><input type="checkbox" name="never" value="health" checked><span>Health information</span></label>
+          <label class="check"><input type="checkbox" name="never" value="staff" checked><span>Employee and volunteer records</span></label>
+          <label class="check"><input type="checkbox" name="never" value="money" checked><span>Bank account and payment card details</span></label>
+          <label class="check"><input type="checkbox" name="never" value="ids" checked><span>Social Security numbers and other ID numbers</span></label>
+          <label class="check"><input type="checkbox" name="never" value="secrets" checked><span>Passwords and access codes</span></label>
+          <label class="check"><input type="checkbox" name="never" value="legal" checked><span>Contracts and legal matters marked confidential</span></label>
+        </div>
+        <div class="fields">
+          <div><label for="other">Anything else (optional)</label><input id="other" name="other" type="text" maxlength="90" autocomplete="off"></div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Who staff go to</legend>
+        <div class="fields fields--pair">
+          <div><label for="approver">Who approves a new AI tool</label><input id="approver" name="approver" type="text" maxlength="60" autocomplete="off"></div>
+          <div><label for="approver-contact">Their email or phone</label><input id="approver-contact" name="approverContact" type="text" maxlength="60" autocomplete="off"></div>
+          <div><label for="reporter">Who to tell about a problem</label><input id="reporter" name="reporter" type="text" maxlength="60" autocomplete="off"></div>
+          <div><label for="reporter-contact">Their email or phone</label><input id="reporter-contact" name="reporterContact" type="text" maxlength="60" autocomplete="off"></div>
+        </div>
+        <p class="field-hint">Leave the second pair blank if it’s the same person.</p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Checking and review</legend>
+        <div class="fields">
+          <div>
+            <label for="checker">Who checks AI-written work before it leaves the organization</label>
+            <input id="checker" name="checker" type="text" maxlength="60" autocomplete="off" placeholder="For example: your supervisor">
+          </div>
+          <div>
+            <label for="interval">How often leadership reviews these rules</label>
+            <select id="interval" name="interval">
+              <option value="every quarter" selected>Every quarter</option>
+              <option value="every six months">Every six months</option>
+              <option value="every year">Every year</option>
+            </select>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+
+    <div class="sheet-side">
+      <div class="sheet-tools">
+        <button id="print-sheet" class="btn" type="button">Print or save as PDF <span aria-hidden="true">↗</span></button>
+        <button id="copy-sheet" class="btn btn--outline" type="button">Copy as text</button>
+        <button id="clear-sheet" class="text-button" type="button">Clear the form</button>
+        <span id="clear-confirm" class="sheet-tools__confirm" hidden>Clear everything you typed?
+          <button id="clear-yes" class="text-button" type="button">Yes, clear it</button>
+          <button id="clear-no" class="text-button" type="button">Keep it</button>
+        </span>
+      </div>
+      <p id="sheet-status" class="sheet-status" role="status"></p>
+      <p id="sheet-message" class="message" role="status" hidden></p>
+
+      <article id="sheet" class="sheet" aria-labelledby="sheet-title">
+        <header class="sheet__head">
+          <p class="sheet__org" data-show="org" data-label="your organization’s name"></p>
+          <h2 id="sheet-title">AI rules for staff</h2>
+          <p>These rules cover every AI tool used for our work, including the AI features inside other software.</p>
+        </header>
+
+        <div class="sheet__rules">
+          <section>
+            <h3>Use only the approved tools, with your work account</h3>
+            <table class="sheet__table">
+              <thead><tr><th scope="col">Tool</th><th scope="col">Approved for</th></tr></thead>
+              <tbody id="tool-list"></tbody>
+            </table>
+            <p>Don’t use a personal account, even for a tool on this list.</p>
+          </section>
+          <section>
+            <h3>Keep this information out of AI tools</h3>
+            <ul id="never-list" class="sheet__bullets"></ul>
+          </section>
+          <section>
+            <h3>Check AI output before you use it</h3>
+            <p>AI tools can state wrong information with confidence. Check facts, figures, names and quotations yourself before you send or publish anything an AI tool wrote.</p>
+            <p class="sheet__who"><span data-show="checker" data-label="who checks AI-written work"></span> reviews AI-written work before it leaves the organization.</p>
+          </section>
+          <section>
+            <h3>A person decides about people</h3>
+            <p>Don’t use an AI tool to decide who is hired or who is eligible for a service. A person makes that decision, and the person affected can ask for a review.</p>
+          </section>
+          <section>
+            <h3>Ask before you use a new tool</h3>
+            <p class="sheet__who">Ask <span data-show="approver" data-label="who approves a new AI tool"></span> (<span data-show="approverContact" data-label="how to reach the person who approves a new tool"></span>).</p>
+            <p>This covers a new AI tool, an AI feature in software we already use, and connecting an AI tool to email, files or other systems.</p>
+          </section>
+          <section>
+            <h3>Report a problem the same day</h3>
+            <p class="sheet__who">Tell <span id="show-reporter" data-label="who to tell about a problem"></span> (<span id="show-reporter-contact" data-label="how to reach the person to tell about a problem"></span>).</p>
+            <p>Do this if you entered something on the list above, or sent out something wrong that an AI tool wrote. You won’t be penalized for reporting your own mistake.</p>
+          </section>
+        </div>
+
+        <footer class="sheet__foot">
+          <p>Reviewed <span data-today></span>. Leadership reviews these rules <span data-show="interval"></span>.</p>
+          <p>From the DMS resources at resources.strategydms.com</p>
+        </footer>
+      </article>
+    </div>
+  </div>
+
+  <section class="wrap more" aria-labelledby="more-title">
+    <h2 id="more-title">More from DMS</h2>
+    <div class="resources">
+      <article class="resource">
+        <div class="resource__text">
+          <h3>AI governance assessment</h3>
+          <p>Free. These rules cover how staff use AI in general. This assessment reviews one specific AI system, the data it uses and your current oversight, and gives you a risk overview with gaps and recommended next steps.</p>
+        </div>
+        <div class="resource__actions">
+          <a class="btn" href="https://airmf.strategydms.com">Open the assessment <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+      <article class="resource">
+        <div class="resource__text">
+          <h3>AI readiness scorecard</h3>
+          <p>Rate 20 statements about how your organization uses AI. You get a score out of 40 and suggested next steps, and we email you the report.</p>
+        </div>
+        <div class="resource__actions">
+          <a class="btn btn--outline" href="/scorecard">Open the scorecard <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+    </div>
+    <p class="contact-line">To talk to DMS about your AI rules, email <a href="mailto:info@strategydms.com?subject=AI%20rules%20for%20staff">info@strategydms.com</a>.</p>
+  </section>
+
+  <noscript><p class="wrap message message--error">Turn on JavaScript in your browser to fill in the AI rules.</p></noscript>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot__bar">
+    <img class="foot__logo" src="/static/assets/dms-logo.png" alt="DMS" width="88" height="35">
+    <p class="foot__visit">You entered <span id="visit-email"></span>. <button id="use-different-email" class="text-button" type="button">Use a different email</button></p>
+    <nav class="foot__links" aria-label="Footer">
+      <a href="https://www.strategydms.com">strategydms.com</a>
+      <a href="https://www.strategydms.com/privacy-policy">Privacy</a>
+      <a href="mailto:info@strategydms.com">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script type="module" src="/static/ai-rules.js"></script>
+</body>
+</html>

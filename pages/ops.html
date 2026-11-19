@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Visitors | DMS resources</title>
+<link rel="icon" href="/static/assets/favicon-32.png" sizes="32x32">
+<link rel="stylesheet" href="/static/assets/fonts.css">
+<link rel="stylesheet" href="/static/styles.css">
+<link rel="stylesheet" href="/static/scorecard.css">
+<link rel="stylesheet" href="/static/ops.css">
+</head>
+<body class="ops-page">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="masthead">
+  <div class="wrap masthead__bar">
+    <a class="masthead__logo" href="/" aria-label="DMS resources"><img src="/static/assets/dms-logo.png" alt="DMS" width="98" height="39"></a>
+    <nav class="masthead__nav" aria-label="Site"><a href="/">All resources</a></nav>
+  </div>
+</header>
+
+<main id="main" class="wrap ops">
+  <section id="list-view">
+    <div class="ops-head">
+      <h1>Visitors</h1>
+      <dl class="totals">
+        <div><dt>Email addresses</dt><dd id="total-visitors">–</dd></div>
+        <div><dt>Scorecards completed</dt><dd id="total-completed">–</dd></div>
+        <div><dt>Emails sent, last 24 hours</dt><dd id="total-mail">–</dd></div>
+        <div><dt>Automated entries refused, last 24 hours</dt><dd id="total-refused">–</dd></div>
+      </dl>
+    </div>
+
+    <div class="toolbar">
+      <div class="toolbar__field">
+        <label for="filter">Filter by email or event</label>
+        <input id="filter" type="search" autocomplete="off">
+      </div>
+      <div class="toolbar__field">
+        <label for="score-filter">AI scorecard</label>
+        <select id="score-filter">
+          <option value="all">All</option>
+          <option value="completed">Completed</option>
+          <option value="not_completed">Not completed</option>
+        </select>
+      </div>
+      <button id="refresh" class="btn btn--outline" type="button">Refresh</button>
+      <a class="btn" href="/api/ops/visitors.csv" download>Download CSV <span aria-hidden="true">↓</span></a>
+    </div>
+
+    <p id="list-message" class="message" role="status" hidden></p>
+
+    <div class="tablewrap" role="region" aria-label="Visitors" tabindex="0">
+      <table>
+        <thead>
+          <tr><th scope="col">Email</th><th scope="col">Event</th><th scope="col">First visit</th><th scope="col">Last visit</th><th scope="col">AI scorecard</th></tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+    <p id="empty" class="empty" hidden></p>
+  </section>
+
+  <section id="report-view" aria-labelledby="report-title" hidden>
+    <div class="report-toolbar">
+      <a id="back-to-list" href="/ops">← Back to visitors</a>
+      <a id="report-export" class="btn btn--outline" download>Download report (CSV) <span aria-hidden="true">↓</span></a>
+    </div>
+    <header class="results-heading">
+      <div><h1 id="report-title" tabindex="-1">AI readiness report</h1><p id="report-date"></p></div>
+    </header>
+    <p id="report-message" class="message" role="status" hidden></p>
+    <div id="report-body" hidden>
+      <div id="score-summary"></div>
+      <div id="report-detail"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot__bar">
+    <p class="foot__visit">You entered <span id="visit-email"></span>. <button id="use-different-email" class="text-button" type="button">Use a different email</button></p>
+  </div>
+</footer>
+
+<script type="module" src="/static/ops.js"></script>
+</body>
+</html>
